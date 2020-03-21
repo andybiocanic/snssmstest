@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "c0b1cfa5-a6cc-4975-af86-c553deede7e7": {
+        "id": "c0b1cfa5-a6cc-4975-af86-c553deede7e7",
+        "parent": null,
+        "name": "snsSmsTest.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "snsSmsTest.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusWest2SMSGatewaysendSMSpost",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "openFiles": [
+      "c0b1cfa5-a6cc-4975-af86-c553deede7e7"
+    ],
+    "currentFileId": "c0b1cfa5-a6cc-4975-af86-c553deede7e7",
+    "resources": {
+      "apigusWest2SMSGatewaysendSMSpost": {
+        "name": "apigusWest2SMSGatewaysendSMSpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-west-2",
+          "apiMode": 0,
+          "apiName": "SMSGateway",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "sendSMS",
+          "resourcePath": "/sendSMS",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "prod",
+          "mode": 0
+        }
+      },
+      "snsDirectSMSResource": {
+        "name": "snsDirectSMSResource",
+        "type": "SNS",
+        "config": {
+          "snsType": 1,
+          "numbers": [
+            "@{receiver}"
+          ]
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "snsSmsTest",
+    "projectDescription": "SNS SMS test",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-west-2",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1584821411989
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "snssmstest",
+      "url": "https://github.com/andybiocanic/snssmstest"
+    }
+  }
+}

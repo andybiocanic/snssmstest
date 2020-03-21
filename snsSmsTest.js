@@ -1,7 +1,7 @@
 let AWS = require('aws-sdk');
 const sns = new AWS.SNS();
 
-exports.handler = function (event, context, callback) {
+exports.handler = async function (event, context, callback) {
 
     let receiver = event['receiver'];
     let sender = event['sender'];
